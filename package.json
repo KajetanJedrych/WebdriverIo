@@ -4,20 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "wdio run ./wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KajetanJedrych/WebdriverIo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KajetanJedrych/WebdriverIo/issues"
+  },
+  "homepage": "https://github.com/KajetanJedrych/WebdriverIo#readme",
   "devDependencies": {
-    "@types/mocha": "^10.0.10",
-    "@wdio/cli": "^9.7.3",
-    "@wdio/local-runner": "^9.7.3",
+    "@wdio/cli": "^9.8.0",
+    "@wdio/local-runner": "^9.8.0",
     "@wdio/mocha-framework": "^9.7.3",
-    "@wdio/spec-reporter": "^9.6.3",
-    "@wdio/visual-service": "^6.3.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
+    "@wdio/selenium-standalone-service": "^8.14.0",
+    "@wdio/spec-reporter": "^9.8.0"
   }
 }

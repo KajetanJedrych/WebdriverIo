@@ -7,7 +7,7 @@ class LoginPage extends BasePage {
     get successMessage() { return $('.flash.success'); }
     get errorMessage() { return $('.flash.error'); }
 
-    async login(username: string, password: string) {
+    async login(username, password) {
         await this.username.setValue(username);
         await this.password.setValue(password);
         await this.loginButton.click();

@@ -1,8 +1,6 @@
-export const config: WebdriverIO.Config = {
+exports.config = {
     runner: 'local',
-    specs: [
-        './test/specs/**/*.ts'
-    ],
+    specs: ['./test/specs/**/*.js'],
     exclude: [],
     maxInstances: 10,
     capabilities: [{
@@ -14,14 +12,13 @@ export const config: WebdriverIO.Config = {
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    services: ['chromedriver'],
     framework: 'mocha',
     reporters: ['spec'],
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
     },
-    before: function (capabilities, specs) {
-        browser.setWindowSize(1920, 1080);
+    before: function () {
+        browser.maximizeWindow();  // Maximizing the browser window before tests
     }
 };
