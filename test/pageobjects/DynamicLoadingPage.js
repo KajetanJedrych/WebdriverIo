@@ -7,23 +7,23 @@ class DynamicLoadingPage extends BasePage {
     get loadingMessage() { return $('#finish h4'); }
 
     async goToDynamicLoading() {
-        await (await this.dynamicLoadingLink).click();
+        await this.dynamicLoadingLink.click();
     }
 
     async selectExample2() {
-        await (await this.example2Link).click();
+        await this.example2Link.click();
     }
 
     async clickStart() {
-        await (await this.startButton).click();
+        await this.startButton.click();
     }
 
     async waitForLoading() {
-        await (await this.loadingMessage).waitForDisplayed({ timeout: 10000 });
+        await this.loadingMessage.waitForDisplayed({ timeout: 10000 });
     }
 
     async getLoadingMessage() {
-        return (await this.loadingMessage).getText();
+        return await this.loadingMessage.getText();
     }
 }
 
