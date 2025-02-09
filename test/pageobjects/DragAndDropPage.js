@@ -15,9 +15,9 @@ export default class DragAndDropPage extends BasePage {
                 type: 'pointer',
                 id: 'mouse',
                 actions: [
-                    { type: 'pointerMove', origin: await this.columnA, duration: 500 },
+                    { type: 'pointerMove', origin: await this.columnA, x: 0, y: 0, duration: 500 },
                     { type: 'pointerDown', button: 0 },
-                    { type: 'pointerMove', origin: await this.columnB, duration: 500 },
+                    { type: 'pointerMove', origin: await this.columnB, x: 0, y: 0, duration: 500 },
                     { type: 'pointerUp', button: 0 }
                 ]
             }
