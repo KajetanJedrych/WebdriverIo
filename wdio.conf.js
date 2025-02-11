@@ -4,7 +4,16 @@ exports.config = {
     exclude: [],
     maxInstances: 10,
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: ['headless', 'disable-gpu']
+       }
+    },
+    {
+        browserName: 'firefox',
+        'moz:firefoxOptions': {
+            args: ['--headless']
+        }
     }],
     logLevel: 'info',
     bail: 0,
