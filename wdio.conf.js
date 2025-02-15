@@ -22,7 +22,19 @@ exports.config = {
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
     framework: 'mocha',
-    reporters: ['spec'],
+    reporters: [
+        'spec',
+        ['html-nice', {
+            outputDir: './reports/html-reports', // Directory where reports will be saved
+            filename: 'report.html',            // Name of the HTML report file
+            reportTitle: 'WebdriverIO Test Report',
+            showInBrowser: true,                // Open report automatically after test execution
+            collapseTests: false,
+            removeOutput: false,
+            jsonFolder: './reports/json-reports',  // Folder where JSON reports will be saved
+            reportFolder: './reports/html-reports' // Folder where HTML report should be generated
+        }]
+    ],
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000

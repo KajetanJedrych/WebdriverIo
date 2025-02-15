@@ -24,6 +24,11 @@
     "@wdio/mocha-framework": "^9.7.3",
     "@wdio/selenium-standalone-service": "^8.14.0",
     "@wdio/spec-reporter": "^9.8.0",
-    "expect-webdriverio": "^5.0.5"
+    "expect-webdriverio": "^5.0.5",
+    "puppeteer": "^24.2.1",
+    "wdio-html-nice-reporter": "^8.1.7"
+  },
+  "dependencies": {
+    "@rpii/wdio-html-reporter-pdf": "^8.0.7"
   }
 }
